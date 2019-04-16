@@ -4,7 +4,7 @@ Please don't revise test.py, environment.py,  atari_wrapper.py, mario_env.py, ag
 ## Installation
 Type the following command to install OpenAI Gym Atari environment.
 
-`$ pip3 install opencv-python gym gym[atari]`
+`$ pip3 install opencv-python gym gym[box2d] gym[atari]`
 
 Please refer to [OpenAI's page](https://github.com/openai/gym) if you have any problem while installing.
 
