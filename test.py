@@ -41,7 +41,7 @@ def test(agent, env, total_episodes=30):
             action = agent.make_action(state, test=True)
             state, reward, done, info = env.step(action)
             episode_reward += reward
-        
+
         rewards.append(episode_reward)
     print('Run %d episodes'%(total_episodes))
     print('Mean:', np.mean(rewards))
@@ -49,14 +49,14 @@ def test(agent, env, total_episodes=30):
 def run(args):
     if args.test_pg:
         env = Environment('LunarLander-v2', args, test=True)
-        from agent_dir.agent_pg import Agent_PG
-        agent = Agent_PG(env, args)
+        from agent_dir.agent_pg import AgentPG
+        agent = AgentPG(env, args)
         test(agent, env)
 
     if args.test_dqn:
         env = Environment('AssaultNoFrameskip-v0', args, atari_wrapper=True, test=True)
-        from agent_dir.agent_dqn import Agent_DQN
-        agent = Agent_DQN(env, args)
+        from agent_dir.agent_dqn import AgentDQN
+        agent = AgentDQN(env, args)
         test(agent, env, total_episodes=100)
 
     if args.test_mario:
