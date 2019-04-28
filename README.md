@@ -8,6 +8,10 @@ Type the following command to install OpenAI Gym Atari environment.
 
 Please refer to [OpenAI's page](https://github.com/openai/gym) if you have any problem while installing.
 
+2019/4/28 update:
+If you encounter `AttributeError: module 'gym.envs.box2d' has no attribute 'LunarLander'`,
+try to run `$ pip3 install gym[box2d]` again.
+
 ## How to run :
 training policy gradient:
 * `$ python3 main.py --train_pg`
